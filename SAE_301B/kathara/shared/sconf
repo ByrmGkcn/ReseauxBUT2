@@ -1,0 +1,8 @@
+apt update
+apt install msmtp
+apt-get install mailutils
+cp /shared/msmtprc /etc/msmtprc
+useradd admin
+echo "admin:password"|chpasswd
+apt-get install openssh-server
+/etc/init.d/ssh start
